@@ -1,0 +1,29 @@
+{
+  "strategy_for_surrogate": "S3",
+  "exclude_severities": ["Baseline_NoDegradation"],
+  "random_seed": 42,
+  "test_fraction": 0.20,
+  "trees": 250,
+  "min_samples_leaf": 2,
+  "context_rows_per_severity": 500,
+  "population_size": 32,
+  "generations": 30,
+  "crossover_probability": 0.90,
+  "mutation_probability": 0.1666666667,
+  "sbx_eta": 15.0,
+  "mutation_eta": 20.0,
+  "policy_bounds": {
+    "T0": [22.0, 24.5],
+    "k_delta_T": [-1.5, 1.5],
+    "k_occ_T": [-1.0, 1.0],
+    "alpha0": [0.60, 0.98],
+    "k_delta_alpha": [-0.30, 0.30],
+    "k_occ_alpha": [-0.30, 0.30]
+  },
+  "aggregation": {
+    "energy": "mean_across_severities",
+    "comfort": "worst_across_severities",
+    "maintenance": "mean_across_severities"
+  },
+  "require_corrected_audit_fields": false
+}
